@@ -13,6 +13,7 @@ Auf der linken Seite findet man einen Reiter _Sketch Files_, in dem befinden sic
 - index.html
 - sketch.js
 - style.css
+![Sketch Files]()
 
 Alle drei Dateien werden automatisch angelegt. In der _index.html_ werden Bibliotheken von p5js.org eingebunden. In der _sketch.js_ fügen wir gleich unseren Code ein. In der _style.css_ kommen die Styles rein für unser Zeichenbrett.
 
@@ -153,3 +154,5 @@ function addColorGreenButton() {
 
 Die Funktion `addColorBlackButton()` erstellt ein _div_-Element mit einem leeren _String_-Parameter. Dem Button fügen wir nun die Styleklassen `btn green` hinzu. D.h. jetzt greifen unseren beiden, im Vorhinein angelegten, Styleklassen. Mit `button.position(85, 5)` sagen wir dem "Button", eigentlich ein _div_-Element, dass er von links (x) 85px entfernt und von oben (y) 5px entfernt positioniert werden soll.
 `button.mousePress()` wird aufgerufen, wenn der Button geklickt wurde. In der Funktion rufen wir dann `stroke('green)` auf, somit ändern wir die Farbe zu grün.
+
+Für die anderen Buttons und ihren Farben, gibt es natürlich auch die entsprechenden Funktionen wie oben. Allerdings mit einer anderen Styleklasse, anderer Position und einer anderen `stroke(farbe)`.
