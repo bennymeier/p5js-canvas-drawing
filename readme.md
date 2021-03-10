@@ -13,7 +13,8 @@ Auf der linken Seite findet man einen Reiter _Sketch Files_, in dem befinden sic
 - index.html
 - sketch.js
 - style.css
-![Sketch Files]()
+
+![Sketch Files](https://github.com/bennymeier/p5js-canvas-drawing/blob/main/files_menu.png?raw=true)
 
 Alle drei Dateien werden automatisch angelegt. In der _index.html_ werden Bibliotheken von p5js.org eingebunden. In der _sketch.js_ fügen wir gleich unseren Code ein. In der _style.css_ kommen die Styles rein für unser Zeichenbrett.
 
