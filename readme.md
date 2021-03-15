@@ -163,3 +163,32 @@ Die Funktion `addColorBlackButton()` erstellt ein _div_-Element mit einem leeren
 `button.mousePress()` wird aufgerufen, wenn der Button geklickt wurde. In der Funktion rufen wir dann `stroke('green)` auf, somit ändern wir die Farbe zu grün.
 
 Für die anderen Buttons und ihren Farben, gibt es natürlich auch die entsprechenden Funktionen wie oben. Allerdings mit einer anderen Styleklasse, anderer Position und einer anderen `stroke(farbe)`.
+
+```js function addSmallSizeButton() {
+  buttonSmall = createDiv('');
+  buttonSmall.class('btn size black small');
+  buttonSmall.position(245, 5);
+  buttonSmall.mousePressed(function () {
+    strokeWeight(5);
+  });
+}
+```
+
+Die Funktion `addSmallSizeButton` ändert die Liniendicke in `5px`. Zu erkennen mit dem Funktionsaufruf `strokeWeight(5);`. Es gibt noch die zwei anderen Funktionen `addMiddleSizeButton()` und `addBigSizeButton()`.
+
+```css
+.size {
+  border-radius: 50%;
+}
+```
+
+Die Buttons welche die Linienstärke beschreiben, sind rund. Dafür steht das `border-radius: 50%;`.
+
+```css
+.small {
+  width: 5px;
+  height: 5px;
+}
+```
+
+Der Button der die dünne Linie beschreiben soll, hat eine Größe von `5x5px`.
