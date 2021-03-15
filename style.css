@@ -35,3 +35,26 @@ canvas {
 .red {
   background-color: red;
 }
+
+.size {
+  border-radius: 50%;
+}
+
+.small {
+  width: 5px;
+  height: 5px;
+}
+
+.middle {
+  width: 8px;
+  height: 8px;
+}
+
+.big {
+  width: 11px;
+  height: 11px;
+}
+
+.selected {
+  border: 2px dashed darkgray;
+}

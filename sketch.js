@@ -7,13 +7,15 @@ function setup() {
 
 function touchMoved() {
   line(mouseX, mouseY, pmouseX, pmouseY);
-  console.log(pmouseX);
-  console.log(mouseX);
   return false;
 }
 
 function resetCanvas() {
   drawingContext.clearRect(0, 0, 450, 450);
+}
+
+function selectButton(btn) {
+  btn.toggleClass('selected');
 }
 
 function addButtons() {
@@ -22,46 +24,76 @@ function addButtons() {
   addColorGreenButton();
   addColorYellowButton();
   addColorRedButton();
+  addSmallSizeButton();
+  addMiddleSizeButton();
+  addBigSizeButton();
 }
 
 function addResetButton() {
-  button = createButton('Löschen');
-  button.position(15, 15);
-  button.mousePressed(resetCanvas);
+  buttonReset = createButton('Löschen');
+  buttonReset.position(15, 15);
+  buttonReset.mousePressed(resetCanvas);
 }
 
 function addColorBlackButton() {
-  button = createDiv('');
-  button.class('btn black');
-  button.position(85, 5);
-  button.mousePressed(function () {
+  buttonBlack = createDiv('');
+  buttonBlack.class('btn black');
+  buttonBlack.position(85, 5);
+  buttonBlack.mousePressed(function () {
     stroke('black');
   });
 }
 
 function addColorGreenButton() {
-  button = createDiv('');
-  button.class('btn green');
-  button.position(125, 5);
-  button.mousePressed(function () {
+  buttonGreen = createDiv('');
+  buttonGreen.class('btn green');
+  buttonGreen.position(125, 5);
+  buttonGreen.mousePressed(function () {
     stroke('green');
   });
 }
 
 function addColorYellowButton() {
-  button = createDiv('');
-  button.class('btn yellow');
-  button.position(165, 5);
-  button.mousePressed(function () {
+  buttonYellow = createDiv('');
+  buttonYellow.class('btn yellow');
+  buttonYellow.position(165, 5);
+  buttonYellow.mousePressed(function () {
     stroke('yellow');
   });
 }
 
 function addColorRedButton() {
-  button = createDiv('');
-  button.class('btn red');
-  button.position(205, 5);
-  button.mousePressed(function () {
+  buttonRed = createDiv('');
+  buttonRed.class('btn red');
+  buttonRed.position(205, 5);
+  buttonRed.mousePressed(function () {
     stroke('red');
+  });
+}
+
+function addSmallSizeButton() {
+  buttonSmall = createDiv('');
+  buttonSmall.class('btn size black small');
+  buttonSmall.position(245, 5);
+  buttonSmall.mousePressed(function () {
+    strokeWeight(5);
+  });
+}
+
+function addMiddleSizeButton() {
+  buttonMiddle = createDiv('');
+  buttonMiddle.class('btn size black middle');
+  buttonMiddle.position(275, 5);
+  buttonMiddle.mousePressed(function () {
+    strokeWeight(8);
+  });
+}
+
+function addBigSizeButton() {
+  buttonBig = createDiv('');
+  buttonBig.class('btn size black big');
+  buttonBig.position(305, 5);
+  buttonBig.mousePressed(function () {
+    strokeWeight(11);
   });
 }
