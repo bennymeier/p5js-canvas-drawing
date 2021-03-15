@@ -164,7 +164,8 @@ Die Funktion `addColorBlackButton()` erstellt ein _div_-Element mit einem leeren
 
 Für die anderen Buttons und ihren Farben, gibt es natürlich auch die entsprechenden Funktionen wie oben. Allerdings mit einer anderen Styleklasse, anderer Position und einer anderen `stroke(farbe)`.
 
-```js function addSmallSizeButton() {
+```js
+function addSmallSizeButton() {
   buttonSmall = createDiv('');
   buttonSmall.class('btn size black small');
   buttonSmall.position(245, 5);
