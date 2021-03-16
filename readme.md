@@ -115,12 +115,10 @@ Zum Schluss rufen wir die Funktion `addButtons()` auf. Diese Funktion wird spät
 ```js
 function touchMoved() {
   line(mouseX, mouseY, pmouseX, pmouseY);
-  return false;
 }
 ```
 
 Die Funktion `touchMoved()` ist eine Event-Funktion. Sie wird jedes mal aufgerufen, wenn man die Maus über die Vorschau bewegt. Dadurch bekommen wir auch unsere aktuelle Mauspositionen `mouseX` und `mouseY`. Die `mouseXY`-Koordinaten liefern die aktuelle horizontale bzw. vertikale Mausposition zurück. Oben links in unserem _canvas_-Element haben wir die Koordinaten 0, 0. D.h. je weiter wir nach rechts gehen, desto größer wird der numerische Wert. Genauso ist es auch beim Runterfahren mit der Maus, die Koordinate `mouseY` wird immer größer.
-Das `return false;` unterbindet die Browser-Defaults (`event.preventDefault()`).
 
 ```js
 function resetCanvas() {
