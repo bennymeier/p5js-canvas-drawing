@@ -1,6 +1,6 @@
 function setup() {
   createCanvas(450, 450);
-  strokeWeight(3);
+  strokeWeight(5);
   stroke('black');
   addButtons();
 }
@@ -12,10 +12,6 @@ function touchMoved() {
 
 function resetCanvas() {
   drawingContext.clearRect(0, 0, 450, 450);
-}
-
-function selectButton(btn) {
-  btn.toggleClass('selected');
 }
 
 function addButtons() {
@@ -36,7 +32,7 @@ function addResetButton() {
 }
 
 function addColorBlackButton() {
-  buttonBlack = createDiv('');
+  buttonBlack = createButton('');
   buttonBlack.class('btn black');
   buttonBlack.position(85, 5);
   buttonBlack.mousePressed(function () {
@@ -45,7 +41,7 @@ function addColorBlackButton() {
 }
 
 function addColorGreenButton() {
-  buttonGreen = createDiv('');
+  buttonGreen = createButton('');
   buttonGreen.class('btn green');
   buttonGreen.position(125, 5);
   buttonGreen.mousePressed(function () {
@@ -54,7 +50,7 @@ function addColorGreenButton() {
 }
 
 function addColorYellowButton() {
-  buttonYellow = createDiv('');
+  buttonYellow = createButton('');
   buttonYellow.class('btn yellow');
   buttonYellow.position(165, 5);
   buttonYellow.mousePressed(function () {
@@ -63,7 +59,7 @@ function addColorYellowButton() {
 }
 
 function addColorRedButton() {
-  buttonRed = createDiv('');
+  buttonRed = createButton('');
   buttonRed.class('btn red');
   buttonRed.position(205, 5);
   buttonRed.mousePressed(function () {
