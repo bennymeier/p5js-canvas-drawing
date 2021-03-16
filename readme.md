@@ -67,7 +67,7 @@ Wir haben verschiedene Buttons mit verschiedenen Farben, damit wir nur einmal ei
 - Buttons sehen identisch aus
 - Code wird gespart
 
-Der Button bekommt eine Breite und Höhe von 24px und wieder einen Rahmen, sowie oben bereits um das _canvas_-Element, genauso wieder einen Abstand von 0.5em. Da wir kein "echtes" _Button_-Element nehmen, sondern ein _div_-Element, müssen wir den Cursor noch zu einem Pointer ändern.
+Der Button bekommt eine Breite und Höhe von `24px` und wieder einen Rahmen, sowie oben bereits um das _canvas_-Element, genauso wieder einen Abstand von `0.5em`. Da wir kein "echtes" _Button_-Element nehmen, sondern ein _div_-Element, müssen wir den Cursor noch zu einem Pointer ändern.
 
 ```css
 .black {
@@ -87,7 +87,7 @@ Der Button bekommt eine Breite und Höhe von 24px und wieder einen Rahmen, sowie
 }
 ```
 
-Unsere Buttons dienen dazu die Malfarbe zu ändern. Hierfür haben wir uns für die Farben schwarz, grün, gelb und rot entschieden. Um diesen "Buttons" eine Farbe zu geben, erstellen wir die Farb-Styleklassen und setzen die Hintergrundfarbe auf die entsprechende Farbe.
+Unsere Buttons dienen dazu die Farbe der Linie zu ändern. Hierfür haben wir uns für die Farben schwarz, grün, gelb, rot und blau entschieden. Um diesen Buttons eine Farbe zu geben, erstellen wir die Farb-Styleklassen und setzen die Hintergrundfarbe auf die entsprechende Farbe.
 
 - js
 
@@ -102,11 +102,11 @@ function setup() {
 }
 ```
 
-p5js.org hat eine Standard-Funktion `setup()` diese wird bei jedem mal Ausführen des Codes aufgerufen. Sie ist quasi unser Einstiegspunkt.
+p5js.org hat eine Standard-Funktion `setup()` diese wird bei jedem mal Ausführen des Codes als erstes aufgerufen. Sie ist also unser Einstiegspunkt.
 
-Mit `createCanvas(450, 450)` erstellen wir unser 450x450px großes _canvas_-Element, d.h. es hat die Breite und Höhe von 450px.
+Mit `createCanvas(450, 450)` erstellen wir unser `450x450px` großes _canvas_-Element, d.h. es hat die Breite und Höhe von 450px.
 
-Mit `strokeWeight(5)` setzen wir die Dicke der Linie auf 3px.
+Mit `strokeWeight(5)` setzen wir die Dicke der Linie auf `5px`.
 
 `stroke('black')` bestimmt die Farbe der Linie, diese setzen wir mit `black` auf schwarz.
 
@@ -120,6 +120,7 @@ function touchMoved() {
 ```
 
 Die Funktion `touchMoved()` ist eine Event-Funktion. Sie wird jedes mal aufgerufen, wenn man die Maus über die Vorschau bewegt. Dadurch bekommen wir auch unsere aktuelle Mauspositionen `mouseX` und `mouseY`. Die `mouseXY`-Koordinaten liefern die aktuelle horizontale bzw. vertikale Mausposition zurück. Oben links in unserem _canvas_-Element haben wir die Koordinaten 0, 0. D.h. je weiter wir nach rechts gehen, desto größer wird der numerische Wert. Genauso ist es auch beim Runterfahren mit der Maus, die Koordinate `mouseY` wird immer größer.
+Das `return false;` unterbindet die Browser-Defaults (`event.preventDefault()`).
 
 ```js
 function resetCanvas() {
@@ -163,7 +164,7 @@ function addColorGreenButton() {
 }
 ```
 
-Die Funktion `addColorBlackButton()` erstellt ein _div_-Element mit einem leeren _String_-Parameter. Dem Button fügen wir nun die Styleklassen `btn green` hinzu. D.h. jetzt greifen unseren beiden, im Vorhinein angelegten, Styleklassen. Mit `button.position(85, 5)` sagen wir dem "Button", eigentlich ein _div_-Element, dass er von links (x) 85px entfernt und von oben (y) 5px entfernt positioniert werden soll.
+Die Funktion `addColorGreenkButton()` erstellt ein _div_-Element mit einem leeren _String_-Parameter. Dem Button fügen wir nun die Styleklassen `btn green` hinzu. D.h. jetzt greifen unseren beiden, im Vorhinein angelegten, Styleklassen. Mit `button.position(85, 5)` sagen wir dem Button, dass er von links (x) `85px` entfernt und von oben (y) `5px` nach unten entfernt positioniert werden soll.
 `button.mousePress()` wird aufgerufen, wenn der Button geklickt wurde. In der Funktion rufen wir dann `stroke('green)` auf, somit ändern wir die Farbe zu grün.
 
 Für die anderen Buttons und ihren Farben, gibt es natürlich auch die entsprechenden Funktionen wie oben. Allerdings mit einer anderen Styleklasse, anderer Position und einer anderen `stroke(farbe)`.
@@ -197,3 +198,5 @@ Die Buttons welche die Linienstärke beschreiben, sind rund. Dafür steht das `b
 ```
 
 Der Button der die dünne Linie beschreiben soll, hat eine Größe von `5x5px`.
+
+Um weitere Buttons mit anderen Farben oder anderen Linienstärken aufzunehmen, muss der Code von oben kopiert werden. Wichtig hierbei ist, dass die Farbe oder Linienstärke angepasst werden muss und die Positionierung.
