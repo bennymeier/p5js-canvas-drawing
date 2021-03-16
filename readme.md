@@ -82,6 +82,9 @@ Der Button bekommt eine Breite und Höhe von 24px und wieder einen Rahmen, sowie
 .red {
   background-color: red;
 }
+.blue {
+  background-color: blue;
+}
 ```
 
 Unsere Buttons dienen dazu die Malfarbe zu ändern. Hierfür haben wir uns für die Farben schwarz, grün, gelb und rot entschieden. Um diesen "Buttons" eine Farbe zu geben, erstellen wir die Farb-Styleklassen und setzen die Hintergrundfarbe auf die entsprechende Farbe.
@@ -93,7 +96,7 @@ Wir gehen in die Datei `sketch.js`.
 ```js
 function setup() {
   createCanvas(450, 450);
-  strokeWeight(3);
+  strokeWeight(5);
   stroke('black');
   addButtons();
 }
@@ -103,7 +106,7 @@ p5js.org hat eine Standard-Funktion `setup()` diese wird bei jedem mal Ausführe
 
 Mit `createCanvas(450, 450)` erstellen wir unser 450x450px großes _canvas_-Element, d.h. es hat die Breite und Höhe von 450px.
 
-Mit `strokeWeight(3)` setzen wir die Dicke der Linie auf 3px.
+Mit `strokeWeight(5)` setzen wir die Dicke der Linie auf 3px.
 
 `stroke('black')` bestimmt die Farbe der Linie, diese setzen wir mit `black` auf schwarz.
 
@@ -133,6 +136,7 @@ function addButtons() {
   addColorGreenButton();
   addColorYellowButton();
   addColorRedButton();
+  addColorBlueButton();
 }
 ```
 
@@ -150,7 +154,7 @@ Wie der Name `addResetButton` vielleicht schon andeuten lässt, wird hier der Bu
 
 ```js
 function addColorGreenButton() {
-  button = createDiv('');
+  button = createButton('');
   button.class('btn green');
   button.position(85, 5);
   button.mousePressed(function () {

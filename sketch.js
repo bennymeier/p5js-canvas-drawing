@@ -20,6 +20,7 @@ function addButtons() {
   addColorGreenButton();
   addColorYellowButton();
   addColorRedButton();
+  addColorBlueButton();
   addSmallSizeButton();
   addMiddleSizeButton();
   addBigSizeButton();
@@ -67,10 +68,19 @@ function addColorRedButton() {
   });
 }
 
+function addColorBlueButton() {
+  buttonRed = createButton('');
+  buttonRed.class('btn blue');
+  buttonRed.position(245, 5);
+  buttonRed.mousePressed(function () {
+    stroke('blue');
+  });
+}
+
 function addSmallSizeButton() {
   buttonSmall = createDiv('');
   buttonSmall.class('btn size black small');
-  buttonSmall.position(245, 5);
+  buttonSmall.position(285, 5);
   buttonSmall.mousePressed(function () {
     strokeWeight(5);
   });
@@ -79,7 +89,7 @@ function addSmallSizeButton() {
 function addMiddleSizeButton() {
   buttonMiddle = createDiv('');
   buttonMiddle.class('btn size black middle');
-  buttonMiddle.position(275, 5);
+  buttonMiddle.position(305, 5);
   buttonMiddle.mousePressed(function () {
     strokeWeight(8);
   });
@@ -88,7 +98,7 @@ function addMiddleSizeButton() {
 function addBigSizeButton() {
   buttonBig = createDiv('');
   buttonBig.class('btn size black big');
-  buttonBig.position(305, 5);
+  buttonBig.position(325, 5);
   buttonBig.mousePressed(function () {
     strokeWeight(11);
   });
