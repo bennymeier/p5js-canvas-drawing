@@ -36,6 +36,10 @@ canvas {
   background-color: red;
 }
 
+.blue {
+  background-color: blue;
+}
+
 .size {
   border-radius: 50%;
 }
@@ -53,8 +57,4 @@ canvas {
 .big {
   width: 11px;
   height: 11px;
-}
-
-.selected {
-  border: 2px dashed darkgray;
 }
